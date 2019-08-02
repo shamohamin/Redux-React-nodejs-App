@@ -1,0 +1,7 @@
+.divBorder
+{
+    border-style : groove;
+    margin : 40px ;
+    padding : 20px ;
+    background-color: rgba(0, 131, 253, 0.473)
+}
