@@ -6,9 +6,7 @@ import Spacer from 'react-spacer';
 import './Register.css';
 import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
-//import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
-//import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
 import {connect} from 'react-redux';
 import postRequest from './postRequest';
@@ -98,6 +96,7 @@ export class  Register extends React.Component {
             isValid = false ;
             errors["last_name_err"] = "Cant Be Empty"
         }
+
         if(typeof errors["last_name_err"] !== "undefined"){
             if(!this.state.last_name.match(/^[a-zA-Z]+$/)){
                 isValid = false ;
@@ -156,7 +155,6 @@ export class  Register extends React.Component {
             }
             this.props.postRequest(data);
             this.clear();
-
 
         }else{
 
