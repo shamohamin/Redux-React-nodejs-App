@@ -6,6 +6,7 @@ import App from './App';
 import Register from './Register';
 // import Navbar from 'react-bootstrap/Navbar';
 // import Nav from 'react-bootstrap/Nav';
+import Table from './Tabel';
 
 export function router() {
 
@@ -51,21 +52,22 @@ export function router() {
         </nav> */}
 
 
-      <Router style={{margin : 30}}>
+      <Router >
         <div>
           <nav className="navbar navbar-expand-sm variant-dark navbar-dark bg-dark">
           <a className="navbar-brand" href="/" style={{color:"red"}}>Menu</a>
           <ul className="navbar-nav mr-auto">
-            <li><Link to={'/'} className="nav-link"> Home </Link></li>
-            <li><Link to={'/Register'} className="nav-link">Register</Link></li>
-            <li><Link to={'/about'} className="nav-link">About</Link></li>
+            <li key={1}><Link to={'/'} className="nav-link"> Home </Link></li>
+            <li key={2}><Link to={'/Register'} className="nav-link">Register</Link></li>
+            <li key={3}><Link to={'/Table'} className="nav-link">Table</Link></li>
+            <li key={4}><Link to={'/About'} className="nav-link">About</Link></li>
           </ul>
           </nav>
           <hr />
           <Switch>
               <Route exact path='/' component={App} />
               <Route path='/Register' component={Register} />
-              {/* <Route path='/about' component={About} /> */}
+              <Route path='/Table' component={Table}/>
           </Switch>
         </div>
       </Router>

@@ -1,8 +1,9 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema ;
+var mongoosePaginate = require('mongoose-paginate');
 
 var userSchema = new Schema({
-    
+
     first_name : {
         type : String ,
         require : true
@@ -30,6 +31,9 @@ userSchema.methods.getInfo = function(){
 
 }
 
-var UserModel = mongoose.model('UserModel',userSchema);
+userSchema.plugin(mongoosePaginate) ;
+
+var UserModel = mongoose.model('userModels',userSchema);
+
 
 module.exports = {UserModel};

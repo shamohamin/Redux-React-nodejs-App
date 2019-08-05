@@ -2,6 +2,7 @@ export const FETCH_DATA = 'FETCH_DATA';
 export const IS_FETCHING_DATA = 'IS_FETCHING_DATA';
 export const ERROR = 'ERROR';
 export const POST_REQUEST = 'POST_REQUEST';
+export const DELETE_REQUEST = 'DELETE_REQUEST';
 
 export function fetchingData(data){
 
@@ -40,6 +41,14 @@ export function post_request(data){
         payload: {
             data : data
         }
+    }
+
+}
+
+export function delete_request(id){
+    
+    return { 
+        type : DELETE_REQUEST ,
     }
 
 }
